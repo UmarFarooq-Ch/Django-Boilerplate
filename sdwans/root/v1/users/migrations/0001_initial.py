@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 import django.utils.timezone
-import sdwans.v1.users.models
+import root.v1.users.models
 
 
 class Migration(migrations.Migration):
@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('last_name', models.CharField(blank=True, max_length=150, verbose_name='last name')),
                 ('is_active', models.BooleanField(default=True, help_text='Designates whether this user should be treated as active. Unselect this instead of deleting accounts.', verbose_name='active')),
                 ('date_joined', models.DateTimeField(default=django.utils.timezone.now, verbose_name='date joined')),
-                ('email', sdwans.v1.users.models.LowerEmailField(max_length=254, unique=True, verbose_name='email address')),
+                ('email', root.v1.users.models.LowerEmailField(max_length=254, unique=True, verbose_name='email address')),
                 ('full_name', models.CharField(max_length=50, null=True, verbose_name='full name')),
                 ('contact_number', models.CharField(max_length=20, null=True, verbose_name='contact number')),
                 ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.Group', verbose_name='groups')),

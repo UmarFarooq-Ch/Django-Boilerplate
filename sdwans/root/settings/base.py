@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 REST_FRAMEWORK = {
-    'EXCEPTION_HANDLER': 'sdwans.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'root.exceptions.custom_exception_handler',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',  # TODO: replace it with JWT
     ),
@@ -90,7 +90,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sdwans.wsgi.application'
+WSGI_APPLICATION = 'root.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
