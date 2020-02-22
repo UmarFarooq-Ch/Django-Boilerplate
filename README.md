@@ -1,4 +1,5 @@
-
+# Boilerplate for Django Restframework
+This project is a simple boilerplate of django-restframework with sigin and signup functions
 
 
 ## FIRST TIME STEPS FOR BOILERPLATE
