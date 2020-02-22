@@ -6,4 +6,5 @@
 *.pyc
 *.env
 venv
+.venv
 .idea
