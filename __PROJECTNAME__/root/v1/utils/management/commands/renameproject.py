@@ -16,8 +16,8 @@ class Command(BaseCommand):
         # logic for renaming the files
 
         files_to_rename = [
-            f'{current_project_name}/root/settings/base.py',
-            f'{current_project_name}/root/wsgi.py',
+            f'root/settings/base.py',
+            f'root/wsgi.py',
         ]
 
         for f in files_to_rename:
@@ -29,6 +29,6 @@ class Command(BaseCommand):
             with open(f, 'w') as file:
                 file.write(filedata)
 
-        os.rename(current_project_name, new_project_name)
+        # os.rename(BASE_DIR[:-5], new_project_name)
 
         self.stdout.write(self.style.SUCCESS(f'Project has been renamed to {new_project_name}'))
