@@ -3,8 +3,8 @@ This project is a simple boilerplate of django-restframework with sigin and sign
 
 
 ## FIRST TIME STEPS FOR BOILERPLATE
-- Rename project directory `__PROJECTNAME__` and first line of file `__PROJECTNAME__/root/settings/base.py` (no need to change anything else)
-- Create virtual environment in Boilerplate folder(not outside or inside) with `virtualenv .venv --python=python3` command
+- Rename project directory `__PROJECTNAME__` and first line of file `__PROJECTNAME__/root/settings/base.py` and `__PROJECTNAME__/root/wsgi.py` files (no need to change anything else)
+- Create virtual environment in Boilerplate folder(not outside or inside) with `virtualenv .venv --python=python3` or `python3 -m venv .venv` command
 - Add interpreter from pycharm settings (by selecting existing interpreter option and choosing python3.6 from .venv which we created in above step)
 - Enable django support from pycharm settings
   - FOR `Django root project` -> `BoilerPlate/__PROJECTNAME__`
