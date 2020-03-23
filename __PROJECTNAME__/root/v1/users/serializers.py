@@ -39,11 +39,12 @@ class UserSerializer(serializers.ModelSerializer):
             'dob',
             'phone',
             'gender',
+            'email_verified',
+            'phone_verified',
         ]
         read_only_fields = [
             'email_verified',
             'phone_verified',
-            'updated_at',
         ]
 
     def create(self, validated_data):
