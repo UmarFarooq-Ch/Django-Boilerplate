@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class UsersConfig(AppConfig):
-    name = 'users'
+    name = 'root.v1.users'

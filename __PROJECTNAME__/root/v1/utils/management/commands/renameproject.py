@@ -18,7 +18,6 @@ class Command(BaseCommand):
         files_to_rename = [
             f'root/settings/base.py',
             f'root/wsgi.py',
-            f'root/asgi.py',
         ]
 
         for f in files_to_rename:
