@@ -16,7 +16,7 @@ class LowerEmailField(models.EmailField):
 
 class User(AbstractUser):
     username = None
-    is_staff = None
+    # is_staff = None
     email = LowerEmailField(_('email address'), unique=True)
     full_name = models.CharField(_('full name'), max_length=50, null=True)
     contact_number = models.CharField(_('contact number'), max_length=20, null=True)
@@ -31,4 +31,4 @@ class User(AbstractUser):
         return self.id
 
     from .managers import UserQuerySet
-    objects = UserQuerySet.as_manager()
+    objects = UserQuerySet()
