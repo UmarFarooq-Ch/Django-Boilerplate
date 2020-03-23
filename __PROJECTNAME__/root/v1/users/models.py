@@ -15,12 +15,26 @@ class LowerEmailField(models.EmailField):
 
 
 class User(AbstractUser):
+    # My fields
+    GENDER_FEMALE = 0
+    GENDER_MALE = 1
+    GENDER_OTHER = 2
+    GENDER_CHOICES = [
+        (GENDER_FEMALE, 'female'),
+        (GENDER_MALE, 'male'),
+        (GENDER_OTHER, 'other'),
+    ]
+    about = models.TextField(_('about'), null=True, )
+    dob = models.DateField(_('date of birth'), )
+    phone = models.CharField(_('phone number'), max_length=20, null=True, )
+    gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, )
+    email_verified = models.BooleanField(_('email verified'), default=False, )
+    phone_verified = models.BooleanField(_('phone verified'), default=False, )
+    updated_at = models.DateTimeField(_('updated at'), auto_now=True, )
+    # parent class fields
+    email = LowerEmailField(_('email address'), unique=True, )
     username = None
     # is_staff = None
-    email = LowerEmailField(_('email address'), unique=True)
-    full_name = models.CharField(_('full name'), max_length=50, null=True)
-    contact_number = models.CharField(_('contact number'), max_length=20, null=True)
-
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 

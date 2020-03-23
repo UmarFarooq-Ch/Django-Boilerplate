@@ -31,10 +31,19 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = [
             'id',
-            'full_name',
+            'first_name',
+            'last_name',
             'email',
-            'contact_number',
             'password',
+            'about',
+            'dob',
+            'phone',
+            'gender',
+        ]
+        read_only_fields = [
+            'email_verified',
+            'phone_verified',
+            'updated_at',
         ]
 
     def create(self, validated_data):
