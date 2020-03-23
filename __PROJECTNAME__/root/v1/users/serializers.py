@@ -14,14 +14,28 @@ class UserSerializer(serializers.ModelSerializer):
     """Serializer for User model"""
 
     email = serializers.EmailField(
-        validators=[UniqueValidator(queryset=User.objects.all(), message='Account already exists with this email')],
-        required=True
+        validators=[
+            UniqueValidator(
+                queryset=User.objects.all(),
+                message='Account already exists with this email',
+            ),
+        ],
+        required=True,
     )
-    password = serializers.CharField(write_only=True, required=True)
+    password = serializers.CharField(
+        write_only=True,
+        required=True,
+    )
 
     class Meta:
         model = User
-        fields = ['id', 'full_name', 'email', 'contact_number', 'password']
+        fields = [
+            'id',
+            'full_name',
+            'email',
+            'contact_number',
+            'password',
+        ]
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])
@@ -48,4 +62,7 @@ class TokenSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DefaultTokenModel
-        fields = ('key', 'user',)
+        fields = [
+            'key',
+            'user',
+        ]
