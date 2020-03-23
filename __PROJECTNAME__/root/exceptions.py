@@ -15,10 +15,12 @@ def custom_integrity_error_handler(exc):
         # remove special characters from the message
         error_message = re.sub(r'_|id|\(|\)', '', match.group(1))
     else:  # else find Detail attribute and append it into error
-        match = re.search(r'DETAIL:  (.*)', error_message)
-        if match:
+        match = re.search(r'(.*)\nDETAIL:  (.*)', error_message)
+        if match and match.group(1) and match.group(1)[:4] == "null":
+            # Error message for database constraint
             error_message = match.group(1)
-
+        elif match and match.group(2):
+            error_message = match.group(2)
     return Response({'errors': [f'{error_message}']}, status=status.HTTP_400_BAD_REQUEST)
 
 
