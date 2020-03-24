@@ -53,10 +53,10 @@ To be able to run **XYZ** you have to meet following dependencies:
 
 - **for development server**
   
-  Run `$ python manage.py runserver 0.0.0.0:8000`
+  Run `$ python manage.py runserver`
 
 - **for production server**
   
   Run `$ python manage.py runserver 0.0.0.0:8000 --settings=root.settings.prod`
 
-ABC's XYZ REST server is now up on `localhost:8000`
+ABC's XYZ REST server is now up on `host:8000`
