@@ -19,7 +19,7 @@ This project is a simple boilerplate of django-restframework with sigin and sign
      -  `Additional options` -> `--settings=root.settings.dev`
      -  `Working directory` -> `BoilerPlate/__PROJECTNAME__`
 - Update `BoilerPlate/__PROJECTNAME__/root/settings/.env` (as sample file is attached with this project, also included in .gitignore)
-- Update README.me or copy from below
+- Update README.md or copy from below
 
 # SAMPLE README.md
 # ABC Technologies XYZ Production Back-End
