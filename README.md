@@ -1,4 +1,4 @@
-# Boilerplate for Django Restframework
+# Boilerplate for Django Rest framework
 This project is a simple boilerplate of django-restframework with sigin and signup functions
 
 
@@ -37,18 +37,26 @@ To be able to run **XYZ** you have to meet following dependencies:
 - Run `$ pip install -r requirements.txt`
 
 ## 3. Configurations:
-- Copy the `.env` file  in `/$PROJECT_ROOT/root/settings/`.
+- Copy the `.env` file  in `/$PROJECT_ROOT/root/settings/`
 
 ## 4. Create Postgres DB:
 - Run `$ sudo -u postgres createdb abc`
 
 ## 5. Apply migrations and Load Data:
 - Switch to project root directory.
-- Run `$ python manage.py migrate --settings=root.settings.dev`
+- Run `$ python manage.py migrate`
 - Run `$ sh load_data.sh`
 
 
 ## 6. Start Application Server
-- ``` python manage.py runserver 0.0.0.0:8000 --settings=root.settings.dev```
+- Switch to project root directory.
+
+- **for development server**
+  
+  Run `$ python manage.py runserver 0.0.0.0:8000`
+
+- **for production server**
+  
+  Run `$ python manage.py runserver 0.0.0.0:8000 --settings=root.settings.prod`
 
 ABC's XYZ REST server is now up on `localhost:8000`
