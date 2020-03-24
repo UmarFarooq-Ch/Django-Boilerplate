@@ -24,7 +24,7 @@ This project is a simple boilerplate of django-restframework with sigin and sign
 # SAMPLE README.md
 # ABC Technologies XYZ Production Back-End
 
-Steps to run Api server:
+Steps to run REST API application server:
 ============
 ## 1. Dependencies:
 To be able to run **XYZ** you have to meet following dependencies:
