@@ -1,5 +1,5 @@
 # Boilerplate for Django Rest framework
-This project is a simple boilerplate of django-restframework with sigin and signup functions
+This project is a simple boilerplate of django-restframework with signin and signup functions
 
 
 ## FIRST TIME STEPS FOR BOILERPLATE
@@ -48,7 +48,7 @@ To be able to run **XYZ** you have to meet following dependencies:
 - Run `$ sh load_data.sh`
 
 
-## 6. Start Application Server
+## 6. Start Application Server:
 - Switch to project root directory.
 
 - **for development server**
