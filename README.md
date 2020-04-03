@@ -57,6 +57,6 @@ To be able to run **XYZ** you have to meet following dependencies:
 
 - **for production server**
   
-  Run `$ python manage.py runserver 0.0.0.0:8000 --settings=root.settings.prod`
+  Run `$ gunicorn --workers=4 --bind 0.0.0.0:8000 root.wsgi`
 
 ABC's XYZ REST server is now up on `host:8000`
