@@ -25,9 +25,9 @@ class User(AbstractUser):
         (GENDER_OTHER, 'other'),
     ]
     about = models.TextField(_('about'), null=True, )
-    dob = models.DateField(_('date of birth'), )
+    dob = models.DateField(_('date of birth'), null=True, )
     phone = models.CharField(_('phone number'), max_length=20, null=True, )
-    gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, )
+    gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, null=True, )
     email_verified = models.BooleanField(_('email verified'), default=False, )
     phone_verified = models.BooleanField(_('phone verified'), default=False, )
     updated_at = models.DateTimeField(_('updated at'), auto_now=True, )
