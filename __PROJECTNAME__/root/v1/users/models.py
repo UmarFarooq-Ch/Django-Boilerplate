@@ -3,15 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-
-class LowerEmailField(models.EmailField):
-    """class to lower email address"""
-
-    def get_prep_value(self, value):
-        value = super(models.EmailField, self).get_prep_value(value)
-        if value is not None:
-            value = value.lower()
-        return value
+from root.v1.utils.fields import LowerEmailField
 
 
 class User(AbstractUser):
