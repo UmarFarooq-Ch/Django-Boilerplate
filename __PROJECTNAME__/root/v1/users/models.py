@@ -1,9 +1,9 @@
-# third party imports
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from root.v1.utils.models.fields import LowerEmailField
+from .managers import UserQuerySet
+from ..utils.models.fields import LowerEmailField
 
 
 class User(AbstractUser):
@@ -36,5 +36,4 @@ class User(AbstractUser):
     def get_id(self):
         return self.id
 
-    from .managers import UserQuerySet
     objects = UserQuerySet()

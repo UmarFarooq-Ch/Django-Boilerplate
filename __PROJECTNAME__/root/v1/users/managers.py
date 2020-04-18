@@ -1,6 +1,4 @@
-# third party imports
 from django.contrib.auth.models import UserManager
-from rest_framework.generics import get_object_or_404
 
 
 class UserQuerySet(UserManager):
@@ -27,6 +25,7 @@ class UserQuerySet(UserManager):
         return super().create_superuser(username, email, password, **extra_fields)
 
     def get_user_from_email(self, email):
+        from rest_framework.generics import get_object_or_404
         return get_object_or_404(self, email__iexact=email)
 
     def check_email(self, email):
